@@ -1,0 +1,3 @@
+spring.application.name=configuracion
+server.port=8888
+spring.cloud.config.server.git.uri = https://github.com/Cristian47985/config
