@@ -18,3 +18,8 @@ logging:
 spring:
   resources:
     add-mappings: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
