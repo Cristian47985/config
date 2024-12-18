@@ -2,24 +2,8 @@ server:
   port: 8080 #the default port used for zuul service
   
 zuul:
-  ignoredServices: '*'
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
-    routes:
-      echoService: # Service to create as sample
-        path: / #path that will be intercepted
-        url: http://localhost:8091
-logging:
-  level:
-    root: INFO
-    org.springframework.cloud.netflix.zuul: DEBUG
-    org.springframework.web: DEBUG
-spring:
-  resources:
-    add-mappings: false
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+ ignoredServices: '*'
+  routes:
+    echo-service:
+      path: /echo/**
+      url: http://localhost:8091
