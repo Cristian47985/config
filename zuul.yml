@@ -5,4 +5,4 @@ zuul:
   routes:
     echoService:
       path: /echo/**
-      serviceId: echoService
+      url : https://ejemplo.com/servicio_usuarios
