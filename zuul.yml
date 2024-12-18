@@ -9,7 +9,7 @@ zuul:
     routes:
       echoService: # Service to create as sample
         path: / #path that will be intercepted
-        serviceId: echoService
+        url: http://localhost:8091
 logging:
   level:
     root: INFO
