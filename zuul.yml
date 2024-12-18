@@ -8,7 +8,7 @@ zuul:
     socket-timeout-millis: 20000
     routes:
       echoService: # Service to create as sample
-        path: /echo/** #path that will be intercepted
+        path: / #path that will be intercepted
         serviceId: ECHOSERVICE
 logging:
   level:
