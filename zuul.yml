@@ -5,5 +5,5 @@ zuul:
   routes:
     echoService:
       path: /echo/**
-      url : http://http://localhost:8091
+      url : http://localhost:8091
       stripPrefix: true
