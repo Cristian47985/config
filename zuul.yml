@@ -10,3 +10,8 @@ zuul:
       echoService: # Service to create as sample
         path: /echo/** #path that will be intercepted
         url: http://localhost:8091
+logging:
+  level:
+    root: INFO
+    org.springframework.cloud.netflix.zuul: DEBUG
+    org.springframework.web: DEBUG
