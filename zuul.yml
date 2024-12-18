@@ -6,3 +6,4 @@ zuul:
     echoService:
       path: /echo
       url : http://http://localhost:8091
+      stripPrefix: true
