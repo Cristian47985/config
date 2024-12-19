@@ -10,7 +10,3 @@ spring:
             - Path=/**
           filters:
             - RedirectTo=301, http://localhost:8091
-eureka:
-  client:
-    fetchRegistry: false  # Desactivar la búsqueda de registros, porque es un servidor Eureka
-    registerWithEureka: false  # Desactivar el registro en este servidor
