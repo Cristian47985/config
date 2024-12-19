@@ -10,3 +10,11 @@ spring:
             - Path=/**
           filters:
             - RedirectTo=301, http://localhost:8091
+      discovery:
+        enabled: true
+        locator:
+          enabled: true
+    eureka:
+      client:
+        service-url:
+          defaultZone: http://localhost:8761/eureka/
