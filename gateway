@@ -1,0 +1,12 @@
+server:
+  port: 8761
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: redireccion_a_8091
+          uri: http://localhost:8091
+          predicates:
+            - Path=/**
+          filters:
+            - RedirectTo=301, http://localhost:8091
