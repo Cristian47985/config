@@ -6,3 +6,8 @@ zuul:
       path: /echo/**
       url : http://localhost:8091
       stripPrefix: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
