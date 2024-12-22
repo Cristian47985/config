@@ -6,6 +6,8 @@ zuul:
       path: /echo/**
       url : http://localhost:8091
       stripPrefix: true
+  fallback:
+    disable: true
 management:
   endpoints:
     web:
