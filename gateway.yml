@@ -8,5 +8,3 @@ spring:
           uri: http://localhost:8091
           predicates:
             - Path=/echo/**
-          filters:
-            - RedirectTo=301, http://localhost:8091
