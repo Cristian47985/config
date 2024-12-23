@@ -4,9 +4,15 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: redireccion_a_8091
+        - id: echoService
           uri: http://localhost:8091
           predicates:
             - Path=/echo/**
+          filters:
+            - StripPrefix=1
+        - id: consumerEchoService
+          uri: http://localhost:8092
+          predicates:
+            - Path=/consumerEcho/**
           filters:
             - StripPrefix=1
