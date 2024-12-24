@@ -3,6 +3,11 @@ server:
 spring:
   cloud:
     gateway:
+      default-filters:
+        - name: RewritePath
+          args:
+            regexp: '/(.*)'
+            replacement: '/$1'
       routes:
         - id: echoService
           uri: lb://ECHOSERVICE
