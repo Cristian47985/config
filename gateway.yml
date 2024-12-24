@@ -11,7 +11,7 @@ spring:
           filters:
             - StripPrefix=1
         - id: consumerEchoService
-          uri: lb://consumerEchoService
+          uri: lb://CONSUMERECHOSERVICE
           predicates:
             - Path=/consumerEcho/**
           filters:
