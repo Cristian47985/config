@@ -5,7 +5,7 @@ spring:
     gateway:
       routes:
         - id: echoService
-          uri: lb://echoService
+          uri: lb://ECHOSERVICE
           predicates:
             - Path=/echo/**
           filters:
