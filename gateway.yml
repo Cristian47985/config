@@ -5,13 +5,13 @@ spring:
     gateway:
       routes:
         - id: echoService
-          uri: http://localhost:8091
+          uri: lb://echoService
           predicates:
             - Path=/echo/**
           filters:
             - StripPrefix=1
         - id: consumerEchoService
-          uri: http://localhost:8092
+          uri: lb://consumerEchoService
           predicates:
             - Path=/consumerEcho/**
           filters:
