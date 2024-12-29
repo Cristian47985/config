@@ -15,6 +15,7 @@ spring:
             - Path=/echo/**
           filters:
             - StripPrefix=1
+            - Customer=asdf11111111
         - id: consumerEchoService
           uri: lb://CONSUMERECHOSERVICE
           predicates:
