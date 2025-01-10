@@ -10,7 +10,7 @@ spring:
             replacement: '/$1'
       routes:
         - id: echoService
-          uri: localhost:8091
+          uri: lb://ECHOSERVICE
           predicates:
             - Path=/echo/**
           filters:
