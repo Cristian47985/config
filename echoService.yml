@@ -20,4 +20,7 @@ resilience4j:
         permitted-number-of-calls-in-half-open-state: 3
         sliding-window-size: 10
         sliding-window-type: count_based
-        timeoutDuration: 2s
+  timelimiter:
+    instances:
+      CircuitBreakerService:
+        timeout-duration: 2s
