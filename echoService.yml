@@ -1,14 +1,16 @@
 resilience4j:
   circuitbreaker:
+    configs:
+      defecto:
+        sliding-window-size: 6
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 20s
+        permitted-number-of-calls-in-half-open-state: 4
+        slow-call-rate-threshold: 50
+        slow-call-duration-threshold: 2s
     instances:
       CircuitBreakerService:
-        failure-rate-threshold: 50
-        minimum-number-of-calls: 5
-        automatic-transition-from-open-to-half-open-enabled: true
-        wait-duration-in-open-state: 10s  # Aumentado para que no pase de open inmediatamente
-        permitted-number-of-calls-in-half-open-state: 3
-        sliding-window-size: 10
-        sliding-window-type: count_based
+        base-config: defecto
 server:
   port: 8091
 management:
