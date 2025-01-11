@@ -21,7 +21,3 @@ resilience4j:
         sliding-window-size: 10
         sliding-window-type: count_based
         timeoutDuration: 2s
-resilience4j:
-  instances:
-    basicExample:
-      timeoutDuration: 2s
