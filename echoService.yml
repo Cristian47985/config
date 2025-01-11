@@ -5,6 +5,9 @@ management:
     web:
       exposure:
         include: "*"
+logging:
+  level:
+    io.github.resilience4j.circuitbreaker: DEBUG
 resilience4j:
   circuitbreaker:
     instances:
